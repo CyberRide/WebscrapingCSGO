@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 weapon="M4A4"
 
 url="https://csgostash.com/weapon/"+weapon
-r=requests.get(url)
+r=requests.get(url, timeout=60)
 
 c=r.content
 soup=BeautifulSoup(c,"html.parser")
